@@ -6,15 +6,16 @@
   "author": "SmartThings",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
     "config": "^1.26.2",
     "express": "^4.15.4",
+    "form-urlencoded": "^2.0.4",
     "fs": "0.0.1-security",
     "http-signature": "^1.1.1",
+    "redis": "^2.8.0",
     "request": "^2.81.0",
-    "request-promise": "^4.2.1",
-    "redis":"^2.8.0",
-    "form-urlencoded":"^2.0.4"
+    "request-promise": "^4.2.1"
   }
 }

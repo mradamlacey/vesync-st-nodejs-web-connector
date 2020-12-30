@@ -7,6 +7,11 @@
   "deviceProfiles": {
     "color": "REPLACE WITH YOUR DEVICE PROFILE ID FROM DEV WORKSPACE"
   },
+  "vesync":{
+    "apiEndpoint": "https://smartapi.vesync.com",
+    "accountId": "2254041",
+    "token": "p5ZJ4LNidz07Mrc8Xgw6CLLPIhltwRrT6USQYOqnh8mFq0F7sQ=="
+  },
   "lifx": {
     "apiEndpoint": "https://api.lifx.com/v1",
     "oauthEndpoint": "https://cloud.lifx.com/oauth",
