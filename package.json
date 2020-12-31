@@ -1,10 +1,10 @@
 {
-  "name": "smartthings-lifx-demo",
-  "version": "1.0.0",
-  "description": "SmartThings/LIFX device integration",
+  "name": "vesync-st-nodejs-web-connector",
+  "version": "0.1.0",
+  "description": "SmartThings/VeSync device connector",
   "main": "server.js",
-  "author": "SmartThings",
-  "license": "ISC",
+  "author": "adam.lacey@gmail.com",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
     "bluebird": "^3.5.0",
@@ -20,5 +20,8 @@
     "redis": "^2.8.0",
     "request": "^2.81.0",
     "request-promise": "^4.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

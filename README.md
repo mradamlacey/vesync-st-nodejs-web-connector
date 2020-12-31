@@ -1,9 +1,9 @@
-# SmartThings LIFX Connector C2C Endpoint App
+# SmartThings VeSync Connector C2C Endpoint App
 
-This project is an example webhook C2C device connector app that uses the SmartThings API to import LIFX bulbs
+This project is an example webhook C2C device connector app that uses the SmartThings API to import VeSync devices
 into your SmartThings account. It's written in NodeJS and can either be deployed to an internet accessible server 
 or run locally with tunneling to the internet provided by a tool such as [ngrok](https://ngrok.com/). 
-It uses [Redis](https://redis.io/) for storing LIFX API credentials.
+It uses [Redis](https://redis.io/) for storing VeSync API credentials.
 
 
 ## Folder structure
