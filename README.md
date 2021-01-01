@@ -10,16 +10,10 @@ It uses [Redis](https://redis.io/) for storing VeSync API credentials.
 
 - config
   - default.json -- Keys, IDs, and other instance specific configuration values
-  - smartthings_rsa.pub -- Public key for validating callback from SmartThings
 - lib
     - api
-        - lifx.js -- Methods for communicating to LIFX required by this app
+        - vesync.js -- Methods for communicating to VeSync API required by this app
         - st.js -- Prototype framework to abstract away some endpoint app implementation details, not specific to this app
-    - lifecycle
-        - configuration.js -- CONFIGURATION lifecycle event handling
-        - crud.js -- INSTALL, UPDATE, and UNINSTALL lifecycle event handling
-        - event.js -- EVENT lifecycle handling
-        - oauth.js -- OAUTH lifecycle handling
     - local
         - db.js -- Simple Redis-based store of state data for this application
         - log.js -- Simple wrapper around console.log, not specific to this app
@@ -34,13 +28,11 @@ It uses [Redis](https://redis.io/) for storing VeSync API credentials.
 - [Docker](https://www.docker.com/) for running Redis. Alternative you can install and run [Redis](https://redis.io/) manually
 - A [Samsung ID and SmartThings](https://account.smartthings.com/login) account
 - A [SmartThings Developer Workspace](https://devworkspace.developer.samsung.com/smartthingsconsole/iotweb/site/index.html#/home) account
-- At least one [LIFX light bulb](https://www.lifx.com/products/lifx) and the LIFX Mobile app (to install the light)
-- Either a LIFX _clientId_ and _clientSecret_ (from LIFX) or a [LIFX personal API Token](https://cloud.lifx.com/) (You can generate the personal
-API token during the connector installation process)
+- At least one [VeSync device](https://www.vesync.com/) and the VeSync mobile app (to install the device)
 
 ## Setup instructions
 
-1. Clone this repository, and open a command prompt or terminal to the `lifx-demo` directory.
+1. Clone this repository, and open a command prompt or terminal to the directory.
 
 2. If you have a LIFX clientId and clientSecret copy them into the appropriate fields in `config/default.json`. If 
 you don't then skip to the next step (Note that LIFX does not allow the general public to register apps and get 

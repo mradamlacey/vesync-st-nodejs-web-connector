@@ -1,28 +1,27 @@
 {
   "connector": {
-    "appName": "REPLACE WITH THE CONNECTOR APP NAME FROM DEV WORKSPACE",
-    "clientId": "REPLACE WITH THE CLIENT ID FROM DEV WORKSPACE",
-    "clientSecret": "REPLACE WITH THE CLIENT SECRET FROM DEV WORKSPACE"
+    "appId": "96b2fb20-e896-4e56-8a93-d16d841906ca",
+    "clientId": "ec31e6f8-f6e5-4064-88f8-37ef8d39c0f1",
+    "clientSecret": "ba1c8516-986f-4f2a-8c00-a49b2e9ef4d2",
+    "serverUrl": "https://shshshs.ngrok.io"
   },
   "deviceProfiles": {
-    "color": "REPLACE WITH YOUR DEVICE PROFILE ID FROM DEV WORKSPACE"
+    "color": "d1c69f5a-eb3a-41df-9b32-82b26f7e19b1"
   },
   "vesync":{
-    "apiEndpoint": "https://smartapi.vesync.com",
-    "accountId": "2254041",
-    "token": "p5ZJ4LNidz07Mrc8Xgw6CLLPIhltwRrT6USQYOqnh8mFq0F7sQ=="
-  },
-  "lifx": {
-    "apiEndpoint": "https://api.lifx.com/v1",
-    "oauthEndpoint": "https://cloud.lifx.com/oauth",
-    "clientId": "",
-    "clientSecret": ""
+    "apiEndpoint": "https://smartapi.vesync.com"
   },
   "smartThings": {
     "apiEndpoint": "https://api.smartthings.com"
   },
   "redis": {
-    "host": "127.0.0.1",
+    "host": "localhost",
     "port": 6379
+  },
+  "publicTunnel":{
+    "type": "ngrok",
+    "enabled": true,
+    "subdomain": "vesync-st-connector",
+    "authtoken": "1mOBZd4qYbhhMQzcmrVdCCNLDSX_7aTvnEsxDF96pQTJx6WV2"
   }
 }

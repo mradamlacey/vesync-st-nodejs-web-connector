@@ -6,6 +6,7 @@
   "author": "adam.lacey@gmail.com",
   "license": "MIT",
   "dependencies": {
+    "@smartthings/smartapp": "^2.4.3",
     "axios": "^0.21.1",
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
@@ -17,11 +18,14 @@
     "http-signature": "^1.1.1",
     "md5": "^2.3.0",
     "mocha": "^8.2.1",
+    "morgan": "^1.10.0",
+    "ngrok": "^3.4.0",
     "redis": "^2.8.0",
     "request": "^2.81.0",
     "request-promise": "^4.2.1"
   },
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

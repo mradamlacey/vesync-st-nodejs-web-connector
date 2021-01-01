@@ -3,8 +3,10 @@ var assert = require('chai').assert;
 var vesync = require('../lib/api/vesync');
 var config = require('config');
 
-const vesyncAccountId = config.get('vesync.accountId');
-const vesyncToken = config.get('vesync.token');
+const accountEmail = process.env.VESYNC_ACCOUNT_EMAIL;
+const accountPassword = process.env.VESYNC_ACCOUNT_PASSWORD;
+const vesyncAccountId = process.env.VESYNC_ACCOUNT_ID;
+const vesyncToken = process.env.VESYNC_TOKEN;
 
 describe("Test Suite", function () {
 
@@ -17,7 +19,7 @@ describe("Test Suite", function () {
 
     it('Get VeSync API Credentials', function (done) {
 
-        var p = vesync.getApiCredentials("adam.lacey@gmail.com", "Gaylord2006");
+        var p = vesync.getApiCredentials(accountEmail, accountPassword);
         
         expect(p).to.not.be.null;
 
