@@ -1,0 +1,88 @@
+{
+  "mnmn": "fVcg",
+  "vid": "ST_e2c4e419-d13b-4f66-aeae-1127ee0fdb65",
+  "version": "0.0.1",
+  "type": "profile",
+  "dashboard": {
+    "states": [
+      {
+        "component": "main",
+        "capability": "fanSpeed",
+        "version": 1
+      }
+    ],
+    "actions": []
+  },
+  "detailView": [
+    {
+      "component": "main",
+      "capability": "airQualitySensor",
+      "version": 1,
+      "values": [],
+      "patch": []
+    },
+    {
+      "component": "main",
+      "capability": "filterState",
+      "version": 1,
+      "values": [],
+      "patch": []
+    },
+    {
+      "component": "main",
+      "capability": "fanSpeed",
+      "version": 1,
+      "values": [],
+      "patch": []
+    }
+  ],
+  "automation": {
+    "conditions": [
+      {
+        "component": "main",
+        "capability": "airQualitySensor",
+        "version": 1,
+        "values": [],
+        "patch": []
+      },
+      {
+        "component": "main",
+        "capability": "filterState",
+        "version": 1,
+        "values": [],
+        "patch": []
+      },
+      {
+        "component": "main",
+        "capability": "fanSpeed",
+        "version": 1,
+        "values": [],
+        "patch": []
+      }
+    ],
+    "actions": [
+      {
+        "component": "main",
+        "capability": "airQualitySensor",
+        "version": 1,
+        "values": [],
+        "patch": []
+      },
+      {
+        "component": "main",
+        "capability": "filterState",
+        "version": 1,
+        "values": [],
+        "patch": []
+      },
+      {
+        "component": "main",
+        "capability": "fanSpeed",
+        "version": 1,
+        "values": [],
+        "patch": []
+      }
+    ]
+  },
+  "migration": true
+}

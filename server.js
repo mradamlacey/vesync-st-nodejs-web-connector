@@ -43,6 +43,8 @@ const publicTunnelAuthtoken = config.get("publicTunnel.authtoken");
         log.info("Not starting public tunnel");
     }
 
+    vesyncSmartApp.setPublicUrl(url);
+
     var redirectUri =  `${url}/oauth/callback`;
 
     /*
@@ -56,15 +58,14 @@ const publicTunnelAuthtoken = config.get("publicTunnel.authtoken");
         .enableEventLogging(4, true)
         .disableCustomDisplayName(true)
         .disableRemoveApp(true)
-        .permissions([/*'r:devices:*', 'w:devices:*', 'x:devices:*',*/ "i:deviceprofiles*"])
-    //  .redirectUri(redirectUri)
-        .defaultDeviceCommandHandler(vesyncSmartApp)
-      //  .firstPageId("splashPage")
-       // .page("splashPage", vesyncSmartApp.splashPage)
+        .permissions(['r:devices:*', 'w:devices:*', 'x:devices:*', "i:deviceprofiles:*"])
+        .redirectUri(redirectUri)
+        .deviceCommandHandler(vesyncSmartApp.deviceCommandHandler)
+        .firstPageId("splashPage")
+        .page("splashPage", vesyncSmartApp.splashPage)
         .page("mainPage", vesyncSmartApp.mainPage)
-     //   .page("selectDevicesPage", vesyncSmartApp.selectDevicesPage)
-      //  .page("finalPage", vesyncSmartApp.finalPage)
-        .installed(vesyncSmartApp.appInstallHandler)
+        .page("selectDevicesPage", vesyncSmartApp.selectDevicesPage)
+        .page("finalPage", vesyncSmartApp.finalPage)  
         .updated(vesyncSmartApp.appUpdatedHandler)
         .uninstalled(vesyncSmartApp.appUninstallHandler)
         .subscribedDeviceEventHandler(vesyncSmartApp.subscribedDeviceEventHandler)
@@ -80,13 +81,34 @@ const publicTunnelAuthtoken = config.get("publicTunnel.authtoken");
     const server = express()
     server.use(logger('dev'))
     server.use(express.json())
-    server.use(express.urlencoded({ extended: false }))
+    server.use(express.urlencoded({ extended: false }));
+    server.use(express.static('static'));
 
     /*
     * Handles calls to the SmartApp from SmartThings, i.e. registration challenges and device events
     */
     server.post('/', async (req, res) => {
         smartThingsConnectorApp.handleHttpCallback(req, res);
+    });
+
+    server.get('/oauth/callback', function (req, res) {
+        const { rawHeaders, httpVersion, method, socket, url, query } = req;
+        const { remoteAddress, remoteFamily } = socket;
+    
+        console.log(
+            JSON.stringify({
+                timestamp: Date.now(),
+                rawHeaders,
+                httpVersion,
+                method,
+                remoteAddress,
+                remoteFamily,
+                url,
+                query
+            })
+        );
+        
+        res.send("OK")
     });
 
     /**

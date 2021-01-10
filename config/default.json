@@ -6,7 +6,7 @@
     "serverUrl": "https://shshshs.ngrok.io"
   },
   "deviceProfiles": {
-    "color": "d1c69f5a-eb3a-41df-9b32-82b26f7e19b1"
+    "airpurifier": "d1c69f5a-eb3a-41df-9b32-82b26f7e19b1"
   },
   "vesync":{
     "apiEndpoint": "https://smartapi.vesync.com"
